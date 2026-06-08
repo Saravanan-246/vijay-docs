@@ -217,230 +217,2184 @@ p {
 // ===== DATA =====
 const sections = [
 
-  {
-    title: "Introduction",
-    content: `
-      <h1>Vijay++ Language</h1>
-      <p>Vijay++ is a custom programming language designed for simplicity and readability.</p>
-      <p>Each keyword represents a clear action, making it easy to understand program flow.</p>
-    `
-  },
+{
+  title: "Welcome to Vijay++",
+  content: `
+    <h1>Welcome to Vijay++</h1>
 
-  {
-    title: "Core Keywords Overview",
-    code: `Ghilli     → Start Program
-Headmaster → Variable
-ImWaiting  → Print Output
-Solu       → Input
-Mudivu     → If
-Illati     → Else
-Vattam     → Loop`,
-    content: `<p>These are the core building blocks of Vijay++.</p>`
-  },
+    <p>
+      Vijay++ is a simple, beginner-friendly programming language
+      designed to make coding easy, readable, and enjoyable.
+    </p>
 
-  {
-    title: "Ghilli (Start)",
-    code: `Ghilli`,
-    content: `
-      <p><b>Meaning:</b> Start of program execution</p>
-      <p><b>Behavior:</b> Interpreter begins execution from here</p>
-    `
-  },
+    <p>
+      Inspired by real-world programming concepts and powered by
+      Tamil-inspired keywords, Vijay++ helps developers focus on
+      logic instead of complicated syntax.
+    </p>
 
-  {
-    title: "Headmaster (Variable)",
-    code: `Headmaster x = 10
-Headmaster name = "Vijay"`,
-    content: `
-      <p><b>Meaning:</b> Create variable</p>
-      <p><b>Behavior:</b> Stores value in memory</p>
-      <p><b>Types:</b> auto-detected (int, float, string, boolean)</p>
-    `
-  },
+    <p>
+      Whether you're learning programming for the first time or
+      building your own interpreter, Vijay++ provides a clean and
+      understandable coding experience.
+    </p>
 
-  {
-    title: "ImWaiting (Print)",
-    code: `ImWaiting x
-ImWaiting "Hello"
-ImWaiting "Hi " + name`,
-    content: `
-      <p><b>Meaning:</b> Output value</p>
-      <p><b>Behavior:</b> Sends data to terminal</p>
-      <p><b>Supports:</b> string + number concatenation</p>
-    `
-  },
+    <h2>Why Vijay++?</h2>
 
-  {
-    title: "Solu (Input)",
-    code: `Solu "Enter name: " name
-Solu "Enter score: " score`,
-    content: `
-      <p><b>Meaning:</b> Take user input</p>
-      <p><b>Behavior:</b> waits for input → stores value</p>
-      <p><b>Special:</b> auto converts type</p>
-    `
-  },
+    <ul>
+      <li>Simple and readable syntax</li>
+      <li>Beginner-friendly design</li>
+      <li>Tamil-inspired keywords</li>
+      <li>Automatic type detection</li>
+      <li>Easy input and output handling</li>
+      <li>Supports conditions and loops</li>
+      <li>Built for learning language design</li>
+    </ul>
 
-  {
-    title: "Mudivu (If)",
-    code: `Mudivu x > 5 {
-  ImWaiting "Big"
-}`,
-    content: `
-      <p><b>Meaning:</b> Conditional execution</p>
-      <p><b>Behavior:</b> runs block only if condition is true</p>
-    `
-  },
+    <h2>Quick Example</h2>
 
-  {
-    title: "Illati (Else)",
-    code: `Mudivu x > 5 {
-  ImWaiting "Big"
-} Illati {
-  ImWaiting "Small"
-}`,
-    content: `
-      <p><b>Meaning:</b> Alternative condition</p>
-      <p><b>Behavior:</b> runs when Mudivu is false</p>
-    `
-  },
+    <p>
+      A simple Vijay++ program:
+    </p>
 
-  {
-    title: "Vattam (Loop)",
-    code: `Vattam 3 {
-  ImWaiting "Hello"
-}`,
-    content: `
-      <p><b>Meaning:</b> Loop / repetition</p>
-      <p><b>Behavior:</b> executes block multiple times</p>
-    `
-  },
+    <pre>
+Ghilli
 
-  {
-    title: "Operators",
-    code: `Arithmetic:
-+  -  *  /
-
-Comparison:
->  <  ==  !=  >=  <=
-
-Logical:
-AND  OR`,
-    content: `
-      <p><b>Meaning:</b> Perform operations</p>
-      <p><b>Usage:</b> used in expressions and conditions</p>
-    `
-  },
-
-  {
-    title: "Data Types",
-    code: `10 → int
-3.14 → float
-"Hello" → string
-true → boolean`,
-    content: `
-      <p><b>Behavior:</b> Types automatically detected</p>
-      <p>No manual declaration needed</p>
-    `
-  },
-
-  {
-    title: "Expression Behavior",
-    code: `ImWaiting 10 + 5
-ImWaiting "Hi " + name`,
-    content: `
-      <p>Supports arithmetic and string operations</p>
-      <p>Handles mixed types automatically</p>
-    `
-  },
-
-  {
-    title: "Comments",
-    code: `// This is a comment`,
-    content: `
-      <p><b>Meaning:</b> ignored by interpreter</p>
-      <p>Used for explanation</p>
-    `
-  },
-
-  {
-    title: "Error Handling",
-    code: `ImWaiting 10 / 0`,
-    content: `
-      <p><b>Behavior:</b> runtime errors handled safely</p>
-      <p>Example: division by zero → error message</p>
-    `
-  },
-
-  {
-    title: "Execution Flow",
-    code: `1. Code written
-2. Tokenized (lexer)
-3. Parsed (AST)
-4. Executed
-5. Output returned`,
-    content: `
-      <p>This is how your interpreter processes code internally</p>
-    `
-  },
-
-  {
-    title: "Full Example",
-    code: `Ghilli
-
-Solu "Enter name: " name
-Solu "Enter score: " score
+Headmaster name = "Vijay"
 
 ImWaiting "Hello " + name
-ImWaiting score + 10`,
-    content: `
-      <p>Complete program using input + output</p>
+    </pre>
 
-      <h3>Output</h3>
-      <pre>
-Enter name:
-> Vijay
-Enter score:
-> 90
+    <h2>Output</h2>
+
+    <pre>
 Hello Vijay
-100
-      </pre>
-    `
-  },
+    </pre>
 
-  {
-    title: "Advanced Example",
-    code: `Ghilli
+    <h2>Core Philosophy</h2>
 
+    <p>
+      Vijay++ aims to make programming feel natural.
+      Every keyword is chosen to clearly express its purpose,
+      helping developers understand code quickly and write
+      programs with confidence.
+    </p>
+
+    <h2>Current Version</h2>
+
+    <p>
+      Vijay++ v0.1 (Experimental)
+    </p>
+
+    <h2>What's Next?</h2>
+
+    <ul>
+      <li>Functions</li>
+      <li>Arrays</li>
+      <li>Objects</li>
+      <li>Modules</li>
+      <li>Package System</li>
+      <li>VS Code Extension</li>
+    </ul>
+  `
+},
+{
+  title: "Getting Started",
+  code: `Ghilli
+
+ImWaiting "Hello World"`,
+  content: `
+    <h1>Getting Started</h1>
+
+    <p>
+      Welcome to your first Vijay++ program.
+      Every Vijay++ application begins with the
+      <b>Ghilli</b> keyword, which marks the starting
+      point of program execution.
+    </p>
+
+    <p>
+      Once the program starts, you can use
+      <b>ImWaiting</b> to display messages,
+      variables, or calculation results on the screen.
+    </p>
+
+    <h2>Hello World Example</h2>
+
+    <p>
+      The following program prints a simple message:
+    </p>
+
+    <pre>
+Ghilli
+
+ImWaiting "Hello World"
+    </pre>
+
+    <h2>Code Breakdown</h2>
+
+    <ul>
+      <li><b>Ghilli</b> → Starts the program.</li>
+      <li><b>ImWaiting</b> → Prints output to the terminal.</li>
+      <li><b>"Hello World"</b> → A string value displayed to the user.</li>
+    </ul>
+
+    <h2>Output</h2>
+
+    <pre>
+Hello World
+    </pre>
+
+    <h2>Execution Flow</h2>
+
+    <ol>
+      <li>The interpreter reads <b>Ghilli</b>.</li>
+      <li>Program execution begins.</li>
+      <li><b>ImWaiting</b> is executed.</li>
+      <li>The text "Hello World" is displayed.</li>
+      <li>The program finishes successfully.</li>
+    </ol>
+
+    <p>
+      Congratulations! You have executed your first
+      Vijay++ program.
+    </p>
+  `
+},
+{
+  title: "Language Keywords",
+  code: `Ghilli
+Headmaster
+ImWaiting
+Solu
+Mudivu
+Illati
+Vattam`,
+  content: `
+    <h1>Language Keywords</h1>
+
+    <p>
+      Keywords are reserved words in Vijay++ that have
+      special meanings. They form the foundation of every
+      Vijay++ program and control how code is executed.
+    </p>
+
+    <p>
+      Each keyword represents a specific action such as
+      creating variables, printing output, taking input,
+      making decisions, or repeating code.
+    </p>
+
+    <h2>Core Keywords</h2>
+
+    <ul>
+      <li><b>Ghilli</b> → Starts program execution.</li>
+      <li><b>Headmaster</b> → Creates a variable.</li>
+      <li><b>ImWaiting</b> → Displays output to the terminal.</li>
+      <li><b>Solu</b> → Accepts input from the user.</li>
+      <li><b>Mudivu</b> → Executes code when a condition is true.</li>
+      <li><b>Illati</b> → Executes code when a condition is false.</li>
+      <li><b>Vattam</b> → Repeats a block of code multiple times.</li>
+    </ul>
+
+    <h2>Example</h2>
+
+    <pre>
+Ghilli
+
+Headmaster name = "Vijay"
+
+ImWaiting name
+    </pre>
+
+    <h2>Output</h2>
+
+    <pre>
+Vijay
+    </pre>
+
+    <h2>Important Notes</h2>
+
+    <ul>
+      <li>Keywords are reserved and cannot be used as variable names.</li>
+      <li>Each keyword performs a predefined operation.</li>
+      <li>Keywords make Vijay++ programs easier to read and understand.</li>
+      <li>Most Vijay++ programs use multiple keywords together.</li>
+    </ul>
+
+    <p>
+      Understanding these keywords is the first step toward
+      mastering Vijay++ programming.
+    </p>
+  `
+},
+
+{
+  title: "Program Structure",
+  code: `Ghilli
+
+Headmaster name = "Vijay"
+Headmaster age = 21
+
+ImWaiting "Name: " + name
+ImWaiting "Age: " + age`,
+  content: `
+    <h1>Program Structure</h1>
+
+    <p>
+      Every Vijay++ program follows a clear and predictable structure.
+      Understanding this structure helps you write clean, readable,
+      and maintainable code.
+    </p>
+
+    <h2>Basic Structure</h2>
+
+    <pre>
+1. Start Program
+2. Create Variables
+3. Take Input (Optional)
+4. Process Data
+5. Display Output
+6. End Program
+    </pre>
+
+    <h2>Example Program</h2>
+
+    <pre>
+Ghilli
+
+Headmaster name = "Vijay"
+Headmaster age = 21
+
+ImWaiting "Name: " + name
+ImWaiting "Age: " + age
+    </pre>
+
+    <h2>Line-by-Line Explanation</h2>
+
+    <p>
+      <b>Line 1:</b> <code>Ghilli</code>
+    </p>
+
+    <p>
+      Marks the starting point of the program.
+      The interpreter begins execution from here.
+    </p>
+
+    <p>
+      <b>Line 3:</b> <code>Headmaster name = "Vijay"</code>
+    </p>
+
+    <p>
+      Creates a variable named <code>name</code>
+      and stores the string value "Vijay".
+    </p>
+
+    <p>
+      <b>Line 4:</b> <code>Headmaster age = 21</code>
+    </p>
+
+    <p>
+      Creates a variable named <code>age</code>
+      and stores the integer value 21.
+    </p>
+
+    <p>
+      <b>Line 6:</b> <code>ImWaiting "Name: " + name</code>
+    </p>
+
+    <p>
+      Displays the text "Name: " followed by the value
+      stored in the variable <code>name</code>.
+    </p>
+
+    <p>
+      <b>Line 7:</b> <code>ImWaiting "Age: " + age</code>
+    </p>
+
+    <p>
+      Displays the text "Age: " followed by the value
+      stored in the variable <code>age</code>.
+    </p>
+
+    <h2>Program Output</h2>
+
+    <pre>
+Name: Vijay
+Age: 21
+    </pre>
+
+    <h2>Recommended Order</h2>
+
+    <ol>
+      <li>Begin with <b>Ghilli</b></li>
+      <li>Declare variables using <b>Headmaster</b></li>
+      <li>Accept user input using <b>Solu</b></li>
+      <li>Perform calculations or logic</li>
+      <li>Use <b>Mudivu</b> and <b>Illati</b> for decisions</li>
+      <li>Use <b>Vattam</b> for repetition</li>
+      <li>Display results using <b>ImWaiting</b></li>
+    </ol>
+
+    <h2>Best Practice</h2>
+
+    <p>
+      Organize your code logically by grouping variables,
+      input operations, processing logic, and output statements.
+      A well-structured program is easier to read, debug,
+      and maintain.
+    </p>
+  `
+},
+
+{
+  title: "Variables",
+  code: `Headmaster age = 21
+Headmaster name = "Vijay"
+Headmaster score = 95.5
+Headmaster passed = true`,
+  content: `
+    <h1>Variables</h1>
+
+    <p>
+      Variables are used to store data in memory.
+      They allow programs to save information and
+      use it later whenever needed.
+    </p>
+
+    <p>
+      In Vijay++, variables are created using the
+      <b>Headmaster</b> keyword.
+    </p>
+
+    <h2>Creating Variables</h2>
+
+    <pre>
+Headmaster age = 21
+Headmaster name = "Vijay"
+Headmaster score = 95.5
+Headmaster passed = true
+    </pre>
+
+    <p>
+      When a variable is created, the value on the
+      right side of the equals sign is stored in memory.
+    </p>
+
+    <h2>How It Works</h2>
+
+    <ul>
+      <li><b>age</b> stores the number 21</li>
+      <li><b>name</b> stores the text "Vijay"</li>
+      <li><b>score</b> stores the decimal value 95.5</li>
+      <li><b>passed</b> stores the boolean value true</li>
+    </ul>
+
+    <h2>Using Variables</h2>
+
+    <pre>
+Headmaster name = "Vijay"
+
+ImWaiting name
+    </pre>
+
+    <h3>Output</h3>
+
+    <pre>
+Vijay
+    </pre>
+
+    <h2>Automatic Type Detection</h2>
+
+    <p>
+      Vijay++ automatically detects the type of data
+      being stored. You do not need to specify
+      int, float, string, or boolean manually.
+    </p>
+
+    <table border="1" cellpadding="8">
+      <tr>
+        <th>Value</th>
+        <th>Detected Type</th>
+      </tr>
+      <tr>
+        <td>21</td>
+        <td>Integer</td>
+      </tr>
+      <tr>
+        <td>95.5</td>
+        <td>Float</td>
+      </tr>
+      <tr>
+        <td>"Hello"</td>
+        <td>String</td>
+      </tr>
+      <tr>
+        <td>true</td>
+        <td>Boolean</td>
+      </tr>
+    </table>
+
+    <h2>Variable Naming Rules</h2>
+
+    <ul>
+      <li>Names should start with a letter.</li>
+      <li>Names can contain letters, numbers, and underscores.</li>
+      <li>Names should be meaningful and descriptive.</li>
+      <li>Keywords cannot be used as variable names.</li>
+    </ul>
+
+    <h3>Valid Names</h3>
+
+    <pre>
+Headmaster studentName = "Vijay"
+Headmaster totalMarks = 450
+Headmaster score_1 = 95
+    </pre>
+
+    <h3>Invalid Names</h3>
+
+    <pre>
+Headmaster 123name = "Vijay"
+Headmaster Ghilli = "Start"
+Headmaster ImWaiting = "Print"
+    </pre>
+
+    <h2>Updating Variables</h2>
+
+    <pre>
+Headmaster score = 90
+
+score = 95
+
+ImWaiting score
+    </pre>
+
+    <h3>Output</h3>
+
+    <pre>
+95
+    </pre>
+
+    <h2>Best Practices</h2>
+
+    <ul>
+      <li>Use meaningful variable names.</li>
+      <li>Avoid short names like x or a unless necessary.</li>
+      <li>Keep names readable and descriptive.</li>
+      <li>Store one purpose per variable.</li>
+    </ul>
+
+    <p>
+      Variables are one of the most important concepts
+      in Vijay++. Almost every program uses variables
+      to store and process data.
+    </p>
+  `
+},
+
+{
+  title: "Input and Output",
+  code: `Solu "Enter Name: " name
+
+ImWaiting name`,
+  content: `
+    <h1>Input and Output</h1>
+
+    <p>
+      Input and Output are fundamental parts of every program.
+      Input allows users to provide information, while Output
+      displays information back to the user.
+    </p>
+
+    <p>
+      In Vijay++, input is handled using <b>Solu</b> and
+      output is handled using <b>ImWaiting</b>.
+    </p>
+
+    <h2>Taking Input</h2>
+
+    <p>
+      The <b>Solu</b> keyword is used to collect data from
+      the user during program execution.
+    </p>
+
+    <pre>
+Solu "Enter Name: " name
+    </pre>
+
+    <p>
+      The message inside quotes is displayed to the user,
+      and the entered value is stored in the specified variable.
+    </p>
+
+    <h3>Example</h3>
+
+    <pre>
+Ghilli
+
+Solu "Enter Name: " name
+    </pre>
+
+    <h3>User Interaction</h3>
+
+    <pre>
+Enter Name:
+> Vijay
+    </pre>
+
+    <p>
+      After entering the value, it is stored inside the
+      variable <code>name</code>.
+    </p>
+
+    <h2>Displaying Output</h2>
+
+    <p>
+      The <b>ImWaiting</b> keyword displays values,
+      text, variables, and expressions on the screen.
+    </p>
+
+    <pre>
+ImWaiting "Hello World"
+    </pre>
+
+    <h3>Output</h3>
+
+    <pre>
+Hello World
+    </pre>
+
+    <h2>Printing Variables</h2>
+
+    <pre>
+Headmaster name = "Vijay"
+
+ImWaiting name
+    </pre>
+
+    <h3>Output</h3>
+
+    <pre>
+Vijay
+    </pre>
+
+    <h2>Combining Text and Variables</h2>
+
+    <pre>
+Headmaster name = "Vijay"
+
+ImWaiting "Hello " + name
+    </pre>
+
+    <h3>Output</h3>
+
+    <pre>
+Hello Vijay
+    </pre>
+
+    <h2>Complete Example</h2>
+
+    <pre>
+Ghilli
+
+Solu "Enter Name: " name
+
+ImWaiting "Welcome " + name
+    </pre>
+
+    <h3>Execution</h3>
+
+    <pre>
+Enter Name:
+> Vijay
+
+Welcome Vijay
+    </pre>
+
+    <h2>Automatic Type Handling</h2>
+
+    <p>
+      Vijay++ automatically detects the type of user input.
+      Numbers become numeric values, text becomes strings,
+      and boolean values are recognized automatically.
+    </p>
+
+    <h2>Best Practices</h2>
+
+    <ul>
+      <li>Use clear prompts when asking for input.</li>
+      <li>Store user input in meaningful variable names.</li>
+      <li>Display helpful output messages.</li>
+      <li>Combine text and variables for better readability.</li>
+    </ul>
+
+    <p>
+      Input and Output form the communication bridge
+      between the user and the program. Mastering these
+      concepts is essential for building interactive
+      Vijay++ applications.
+    </p>
+  `
+},
+
+{
+  title: "Data Types",
+  code: `10
+3.14
+"Hello"
+true`,
+  content: `
+    <ul>
+      <li>Integer</li>
+      <li>Float</li>
+      <li>String</li>
+      <li>Boolean</li>
+    </ul>
+  `
+},
+
+{
+  title: "Operators",
+  code: `Arithmetic Operators
++  -  *  /
+
+Comparison Operators
+==  !=  >  <  >=  <=
+
+Logical Operators
+AND  OR`,
+  content: `
+    <h1>Operators</h1>
+
+    <p>
+      Operators are special symbols and keywords used
+      to perform calculations, comparisons, and logical
+      operations on values.
+    </p>
+
+    <p>
+      Vijay++ provides Arithmetic, Comparison, and
+      Logical operators for building expressions and
+      program logic.
+    </p>
+
+    <h2>Arithmetic Operators</h2>
+
+    <p>
+      Arithmetic operators are used for mathematical
+      calculations.
+    </p>
+
+    <table border="1" cellpadding="8">
+      <tr>
+        <th>Operator</th>
+        <th>Description</th>
+        <th>Example</th>
+      </tr>
+      <tr>
+        <td>+</td>
+        <td>Addition</td>
+        <td>10 + 5</td>
+      </tr>
+      <tr>
+        <td>-</td>
+        <td>Subtraction</td>
+        <td>10 - 5</td>
+      </tr>
+      <tr>
+        <td>*</td>
+        <td>Multiplication</td>
+        <td>10 * 5</td>
+      </tr>
+      <tr>
+        <td>/</td>
+        <td>Division</td>
+        <td>10 / 5</td>
+      </tr>
+    </table>
+
+    <h3>Example</h3>
+
+    <pre>
+ImWaiting 10 + 5
+ImWaiting 20 - 5
+ImWaiting 4 * 5
+ImWaiting 20 / 4
+    </pre>
+
+    <h3>Output</h3>
+
+    <pre>
+15
+15
+20
+5
+    </pre>
+
+    <h2>Comparison Operators</h2>
+
+    <p>
+      Comparison operators compare two values and
+      return either true or false.
+    </p>
+
+    <table border="1" cellpadding="8">
+      <tr>
+        <th>Operator</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>==</td>
+        <td>Equal To</td>
+      </tr>
+      <tr>
+        <td>!=</td>
+        <td>Not Equal To</td>
+      </tr>
+      <tr>
+        <td>></td>
+        <td>Greater Than</td>
+      </tr>
+      <tr>
+        <td><</td>
+        <td>Less Than</td>
+      </tr>
+      <tr>
+        <td>>=</td>
+        <td>Greater Than Or Equal To</td>
+      </tr>
+      <tr>
+        <td><=</td>
+        <td>Less Than Or Equal To</td>
+      </tr>
+    </table>
+
+    <h3>Example</h3>
+
+    <pre>
+Mudivu 10 > 5 {
+  ImWaiting "True"
+}
+    </pre>
+
+    <h3>Output</h3>
+
+    <pre>
+True
+    </pre>
+
+    <h2>Logical Operators</h2>
+
+    <p>
+      Logical operators combine multiple conditions.
+    </p>
+
+    <table border="1" cellpadding="8">
+      <tr>
+        <th>Operator</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>AND</td>
+        <td>Both conditions must be true</td>
+      </tr>
+      <tr>
+        <td>OR</td>
+        <td>At least one condition must be true</td>
+      </tr>
+    </table>
+
+    <h3>Example</h3>
+
+    <pre>
+Mudivu age >= 18 AND age <= 60 {
+  ImWaiting "Eligible"
+}
+    </pre>
+
+    <p>
+      The output will be displayed only if both
+      conditions evaluate to true.
+    </p>
+
+    <h2>String Concatenation</h2>
+
+    <p>
+      The + operator can also combine text values.
+    </p>
+
+    <pre>
+Headmaster name = "Vijay"
+
+ImWaiting "Hello " + name
+    </pre>
+
+    <h3>Output</h3>
+
+    <pre>
+Hello Vijay
+    </pre>
+
+    <h2>Operator Precedence</h2>
+
+    <p>
+      Arithmetic expressions are evaluated according
+      to mathematical precedence rules.
+    </p>
+
+    <pre>
+ImWaiting 10 + 5 * 2
+    </pre>
+
+    <h3>Output</h3>
+
+    <pre>
+20
+    </pre>
+
+    <p>
+      Multiplication is performed before addition.
+    </p>
+
+    <h2>Best Practices</h2>
+
+    <ul>
+      <li>Use comparison operators inside Mudivu conditions.</li>
+      <li>Use logical operators to combine conditions.</li>
+      <li>Use parentheses when expressions become complex.</li>
+      <li>Keep expressions simple and readable.</li>
+    </ul>
+
+    <p>
+      Operators are the foundation of calculations,
+      decision-making, and program logic in Vijay++.
+    </p>
+  `
+},
+
+{
+  title: "Conditional Statements",
+  code: `Mudivu marks > 50 {
+  ImWaiting "Pass"
+}`,
+  content: `
+    <h1>Conditional Statements</h1>
+
+    <p>
+      Conditional statements allow a program to make
+      decisions based on specific conditions.
+    </p>
+
+    <p>
+      In Vijay++, conditional execution is performed
+      using the <b>Mudivu</b> keyword.
+    </p>
+
+    <p>
+      When the condition evaluates to <b>true</b>,
+      the code inside the block is executed.
+      If the condition evaluates to <b>false</b>,
+      the block is skipped.
+    </p>
+
+    <h2>Basic Syntax</h2>
+
+    <pre>
+Mudivu condition {
+  // code to execute
+}
+    </pre>
+
+    <h2>Simple Example</h2>
+
+    <pre>
+Headmaster marks = 75
+
+Mudivu marks > 50 {
+  ImWaiting "Pass"
+}
+    </pre>
+
+    <h3>Output</h3>
+
+    <pre>
+Pass
+    </pre>
+
+    <h2>How It Works</h2>
+
+    <ol>
+      <li>The interpreter evaluates the condition.</li>
+      <li>If the condition is true, the block executes.</li>
+      <li>If the condition is false, the block is skipped.</li>
+      <li>Program execution continues after the block.</li>
+    </ol>
+
+    <h2>Using Comparison Operators</h2>
+
+    <p>
+      Conditions usually use comparison operators.
+    </p>
+
+    <pre>
+==
+!=
+>
+<
+>=
+<=
+    </pre>
+
+    <h3>Example</h3>
+
+    <pre>
+Headmaster age = 18
+
+Mudivu age >= 18 {
+  ImWaiting "Eligible"
+}
+    </pre>
+
+    <h3>Output</h3>
+
+    <pre>
+Eligible
+    </pre>
+
+    <h2>Using Variables in Conditions</h2>
+
+    <pre>
+Headmaster balance = 1000
+
+Mudivu balance > 500 {
+  ImWaiting "Sufficient Balance"
+}
+    </pre>
+
+    <h3>Output</h3>
+
+    <pre>
+Sufficient Balance
+    </pre>
+
+    <h2>Using Logical Operators</h2>
+
+    <p>
+      Multiple conditions can be combined using
+      logical operators.
+    </p>
+
+    <pre>
+Mudivu age >= 18 AND age <= 60 {
+  ImWaiting "Working Age"
+}
+    </pre>
+
+    <p>
+      The block executes only when all conditions
+      evaluate to true.
+    </p>
+
+    <h2>Nested Conditions</h2>
+
+    <pre>
+Mudivu marks > 50 {
+
+  Mudivu marks > 90 {
+    ImWaiting "Excellent"
+  }
+
+}
+    </pre>
+
+    <p>
+      A Mudivu block can contain another Mudivu block,
+      allowing more advanced decision-making.
+    </p>
+
+    <h2>Real World Example</h2>
+
+    <pre>
+Solu "Enter Age: " age
+
+Mudivu age >= 18 {
+  ImWaiting "You Can Vote"
+}
+    </pre>
+
+    <h3>Execution</h3>
+
+    <pre>
+Enter Age:
+> 21
+
+You Can Vote
+    </pre>
+
+    <h2>Best Practices</h2>
+
+    <ul>
+      <li>Keep conditions simple and readable.</li>
+      <li>Use meaningful variable names.</li>
+      <li>Avoid deeply nested conditions when possible.</li>
+      <li>Use logical operators carefully.</li>
+    </ul>
+
+    <p>
+      Conditional statements are essential for creating
+      intelligent programs that can respond differently
+      based on user input and data.
+    </p>
+  `
+},
+
+{
+  title: "Else Statements (Illati)",
+  code: `Mudivu marks > 50 {
+  ImWaiting "Pass"
+}
+Illati {
+  ImWaiting "Fail"
+}`,
+  content: `
+    <h1>Else Statements (Illati)</h1>
+
+    <p>
+      The <b>Illati</b> keyword provides an alternative
+      execution path when a <b>Mudivu</b> condition
+      evaluates to false.
+    </p>
+
+    <p>
+      While <b>Mudivu</b> executes code only when a
+      condition is true, <b>Illati</b> executes code
+      when that condition is false.
+    </p>
+
+    <h2>Why Use Illati?</h2>
+
+    <p>
+      Many programs need to perform different actions
+      depending on the result of a condition.
+    </p>
+
+    <p>
+      Illati allows your program to handle both
+      possible outcomes.
+    </p>
+
+    <h2>Basic Syntax</h2>
+
+    <pre>
+Mudivu condition {
+  // executes if true
+}
+Illati {
+  // executes if false
+}
+    </pre>
+
+    <h2>Simple Example</h2>
+
+    <pre>
+Headmaster marks = 40
+
+Mudivu marks > 50 {
+  ImWaiting "Pass"
+}
+Illati {
+  ImWaiting "Fail"
+}
+    </pre>
+
+    <h3>Output</h3>
+
+    <pre>
+Fail
+    </pre>
+
+    <h2>How It Works</h2>
+
+    <ol>
+      <li>The interpreter evaluates the Mudivu condition.</li>
+      <li>If the condition is true, the Mudivu block executes.</li>
+      <li>The Illati block is skipped.</li>
+      <li>If the condition is false, the Illati block executes.</li>
+    </ol>
+
+    <h2>Condition Is True</h2>
+
+    <pre>
+Headmaster age = 20
+
+Mudivu age >= 18 {
+  ImWaiting "Adult"
+}
+Illati {
+  ImWaiting "Minor"
+}
+    </pre>
+
+    <h3>Output</h3>
+
+    <pre>
+Adult
+    </pre>
+
+    <h2>Condition Is False</h2>
+
+    <pre>
+Headmaster age = 15
+
+Mudivu age >= 18 {
+  ImWaiting "Adult"
+}
+Illati {
+  ImWaiting "Minor"
+}
+    </pre>
+
+    <h3>Output</h3>
+
+    <pre>
+Minor
+    </pre>
+
+    <h2>Real World Example</h2>
+
+    <pre>
+Solu "Enter Password: " password
+
+Mudivu password == "vijay123" {
+  ImWaiting "Access Granted"
+}
+Illati {
+  ImWaiting "Access Denied"
+}
+    </pre>
+
+    <h3>Execution</h3>
+
+    <pre>
+Enter Password:
+> test123
+
+Access Denied
+    </pre>
+
+    <h2>Decision Flow</h2>
+
+    <pre>
+Condition
+    |
+    v
+True ? ---------- No
+ |                 |
+ v                 v
+Mudivu         Illati
+ Block          Block
+    </pre>
+
+    <h2>Best Practices</h2>
+
+    <ul>
+      <li>Use Illati only when an alternative action is required.</li>
+      <li>Keep decision logic simple and readable.</li>
+      <li>Use meaningful conditions.</li>
+      <li>Avoid deeply nested Mudivu and Illati blocks.</li>
+    </ul>
+
+    <p>
+      Together, Mudivu and Illati allow Vijay++ programs
+      to make intelligent decisions and respond differently
+      based on changing conditions.
+    </p>
+  `
+},
+
+{
+  title: "Loops (Vattam)",
+  code: `Vattam 5 {
+  ImWaiting "Hello"
+}`,
+  content: `
+    <h1>Loops (Vattam)</h1>
+
+    <p>
+      Loops allow a program to execute the same block
+      of code multiple times without writing the code
+      repeatedly.
+    </p>
+
+    <p>
+      In Vijay++, looping is performed using the
+      <b>Vattam</b> keyword.
+    </p>
+
+    <p>
+      A loop is useful when a task needs to be repeated,
+      such as displaying messages, processing data,
+      or performing calculations multiple times.
+    </p>
+
+    <h2>Basic Syntax</h2>
+
+    <pre>
+Vattam count {
+  // code block
+}
+    </pre>
+
+    <p>
+      The number following <b>Vattam</b> determines
+      how many times the block will execute.
+    </p>
+
+    <h2>Simple Example</h2>
+
+    <pre>
+Vattam 5 {
+  ImWaiting "Hello"
+}
+    </pre>
+
+    <h3>Output</h3>
+
+    <pre>
+Hello
+Hello
+Hello
+Hello
+Hello
+    </pre>
+
+    <h2>How It Works</h2>
+
+    <ol>
+      <li>The interpreter reads the loop count.</li>
+      <li>The code block begins execution.</li>
+      <li>The block executes once.</li>
+      <li>The process repeats until the count is reached.</li>
+      <li>The program continues after the loop.</li>
+    </ol>
+
+    <h2>Using Variables Inside Loops</h2>
+
+    <pre>
 Headmaster total = 0
 
-Vattam 3 {
+Vattam 5 {
   total = total + 10
 }
 
-Mudivu total > 20 {
-  ImWaiting "High"
-} Illati {
-  ImWaiting "Low"
-}`,
-    content: `
-      <p>Combines loop, condition, and variable updates</p>
-    `
-  },
+ImWaiting total
+    </pre>
 
-  {
-    title: "Future (Functions)",
-    code: `Sei add(a, b) {
-  Thiruppu a + b
-}`,
-    content: `
-      <p>Upcoming feature:</p>
-      <ul>
-        <li>Functions</li>
-        <li>Return values</li>
-      </ul>
-    `
+    <h3>Output</h3>
+
+    <pre>
+50
+    </pre>
+
+    <p>
+      During each iteration, the value of
+      <code>total</code> increases by 10.
+    </p>
+
+    <h2>Loop Execution Example</h2>
+
+    <pre>
+Headmaster count = 0
+
+Vattam 3 {
+  count = count + 1
+  ImWaiting count
+}
+    </pre>
+
+    <h3>Output</h3>
+
+    <pre>
+1
+2
+3
+    </pre>
+
+    <h2>Nested Loops</h2>
+
+    <p>
+      A loop can contain another loop.
+      This is known as a nested loop.
+    </p>
+
+    <pre>
+Vattam 2 {
+
+  Vattam 3 {
+    ImWaiting "Hello"
   }
+
+}
+    </pre>
+
+    <h3>Output</h3>
+
+    <pre>
+Hello
+Hello
+Hello
+Hello
+Hello
+Hello
+    </pre>
+
+    <h2>Real World Example</h2>
+
+    <pre>
+Headmaster studentCount = 3
+
+Vattam studentCount {
+  ImWaiting "Processing Student"
+}
+    </pre>
+
+    <h3>Output</h3>
+
+    <pre>
+Processing Student
+Processing Student
+Processing Student
+    </pre>
+
+    <h2>Execution Flow</h2>
+
+    <pre>
+Start Loop
+    |
+    v
+Execute Block
+    |
+    v
+Count Reached?
+    |
+ No ------> Repeat
+    |
+   Yes
+    |
+    v
+Continue Program
+    </pre>
+
+    <h2>Best Practices</h2>
+
+    <ul>
+      <li>Use loops to avoid duplicate code.</li>
+      <li>Keep loop blocks simple and readable.</li>
+      <li>Use meaningful variable names inside loops.</li>
+      <li>Avoid unnecessary nested loops.</li>
+      <li>Use loops only when repetition is required.</li>
+    </ul>
+
+    <p>
+      Loops are one of the most powerful programming
+      concepts. Combined with variables and conditions,
+      they allow Vijay++ programs to automate repetitive
+      tasks efficiently.
+    </p>
+  `
+},
+
+{
+  title: "Comments",
+  code: `// This line is ignored by the interpreter`,
+  content: `
+    <h1>Comments</h1>
+
+    <p>
+      Comments are used to add notes, explanations,
+      and documentation inside source code.
+    </p>
+
+    <p>
+      Comments are ignored by the Vijay++ interpreter
+      and do not affect program execution.
+    </p>
+
+    <p>
+      They help developers understand code more easily,
+      especially in large or complex programs.
+    </p>
+
+    <h2>Single-Line Comments</h2>
+
+    <p>
+      A single-line comment begins with two forward slashes (<b>//</b>).
+      Everything after the slashes on that line is treated as a comment.
+    </p>
+
+    <pre>
+// This is a comment
+    </pre>
+
+    <h2>Example</h2>
+
+    <pre>
+Ghilli
+
+// Store student information
+Headmaster name = "Vijay"
+
+// Display student name
+ImWaiting name
+    </pre>
+
+    <h3>Output</h3>
+
+    <pre>
+Vijay
+    </pre>
+
+    <p>
+      The comment lines are completely ignored during execution.
+    </p>
+
+    <h2>Why Use Comments?</h2>
+
+    <ul>
+      <li>Explain program logic.</li>
+      <li>Make code easier to understand.</li>
+      <li>Document important information.</li>
+      <li>Help teams collaborate on projects.</li>
+      <li>Improve long-term code maintenance.</li>
+    </ul>
+
+    <h2>Good Comment Examples</h2>
+
+    <pre>
+// Calculate total marks
+Headmaster total = maths + science
+
+// Check if student passed
+Mudivu total >= 50 {
+  ImWaiting "Pass"
+}
+    </pre>
+
+    <h2>Poor Comment Examples</h2>
+
+    <pre>
+// Variable
+Headmaster age = 21
+
+// Print
+ImWaiting age
+    </pre>
+
+    <p>
+      Avoid comments that simply repeat what the code
+      already makes obvious.
+    </p>
+
+    <h2>Best Practices</h2>
+
+    <ul>
+      <li>Write clear and meaningful comments.</li>
+      <li>Explain why code exists, not just what it does.</li>
+      <li>Keep comments updated when code changes.</li>
+      <li>Avoid excessive or unnecessary comments.</li>
+    </ul>
+
+    <h2>Important Note</h2>
+
+    <p>
+      Comments are intended for developers and are never
+      displayed to users when a program runs.
+    </p>
+
+    <p>
+      Well-written comments improve readability and make
+      Vijay++ programs easier to learn, maintain, and debug.
+    </p>
+  `
+},
+
+{
+  title: "Error Handling",
+  code: `ImWaiting 10 / 0`,
+  content: `
+    <h1>Error Handling</h1>
+
+    <p>
+      Errors occur when a program encounters a problem
+      that prevents normal execution.
+    </p>
+
+    <p>
+      Vijay++ is designed to provide clear, readable,
+      and beginner-friendly error messages that help
+      developers quickly identify and fix issues.
+    </p>
+
+    <h2>What Is an Error?</h2>
+
+    <p>
+      An error is an unexpected situation that occurs
+      while a program is being parsed or executed.
+    </p>
+
+    <p>
+      Errors may be caused by invalid syntax,
+      incorrect operations, undefined variables,
+      or invalid user input.
+    </p>
+
+    <h2>Runtime Error Example</h2>
+
+    <pre>
+ImWaiting 10 / 0
+    </pre>
+
+    <h3>Error Message</h3>
+
+    <pre>
+Runtime Error:
+Cannot divide by zero.
+    </pre>
+
+    <p>
+      Division by zero is mathematically invalid,
+      so the interpreter stops execution and
+      reports an error.
+    </p>
+
+    <h2>Undefined Variable</h2>
+
+    <pre>
+ImWaiting studentName
+    </pre>
+
+    <h3>Error Message</h3>
+
+    <pre>
+Runtime Error:
+Variable 'studentName' is not defined.
+    </pre>
+
+    <h2>Invalid Syntax</h2>
+
+    <pre>
+Headmaster = 10
+    </pre>
+
+    <h3>Error Message</h3>
+
+    <pre>
+Syntax Error:
+Expected variable name after 'Headmaster'.
+    </pre>
+
+    <h2>Invalid Condition</h2>
+
+    <pre>
+Mudivu {
+  ImWaiting "Hello"
+}
+    </pre>
+
+    <h3>Error Message</h3>
+
+    <pre>
+Syntax Error:
+Condition expected after 'Mudivu'.
+    </pre>
+
+    <h2>Error Categories</h2>
+
+    <table border="1" cellpadding="8">
+      <tr>
+        <th>Error Type</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Syntax Error</td>
+        <td>Invalid program structure.</td>
+      </tr>
+      <tr>
+        <td>Runtime Error</td>
+        <td>Error during execution.</td>
+      </tr>
+      <tr>
+        <td>Reference Error</td>
+        <td>Variable not found.</td>
+      </tr>
+      <tr>
+        <td>Type Error</td>
+        <td>Invalid operation between data types.</td>
+      </tr>
+    </table>
+
+    <h2>Error Reporting</h2>
+
+    <p>
+      Vijay++ attempts to provide detailed information
+      whenever an error occurs.
+    </p>
+
+    <pre>
+Runtime Error
+
+Line: 5
+Code: ImWaiting total / 0
+
+Reason:
+Cannot divide by zero.
+    </pre>
+
+    <p>
+      This information helps developers locate
+      and resolve problems more efficiently.
+    </p>
+
+    <h2>Best Practices</h2>
+
+    <ul>
+      <li>Declare variables before using them.</li>
+      <li>Check values before performing calculations.</li>
+      <li>Write valid conditions inside Mudivu blocks.</li>
+      <li>Use meaningful variable names.</li>
+      <li>Test programs with different inputs.</li>
+    </ul>
+
+    <h2>Developer Experience</h2>
+
+    <p>
+      One of the goals of Vijay++ is to make debugging
+      simple for beginners. Error messages should explain
+      what went wrong, where it happened, and how to fix it.
+    </p>
+
+    <p>
+      Clear error reporting helps developers learn faster
+      and build more reliable programs.
+    </p>
+  `
+},
+{
+  title: "Execution Process",
+  code: `Source Code
+    ↓
+Lexer
+    ↓
+Parser
+    ↓
+AST
+    ↓
+Interpreter
+    ↓
+Output`,
+  content: `
+    <h1>Execution Process</h1>
+
+    <p>
+      Before a Vijay++ program produces output,
+      it passes through several internal stages.
+    </p>
+
+    <p>
+      These stages transform human-readable source code
+      into instructions that the interpreter can execute.
+    </p>
+
+    <h2>Execution Pipeline</h2>
+
+    <pre>
+Source Code
+    ↓
+Lexer
+    ↓
+Parser
+    ↓
+AST
+    ↓
+Interpreter
+    ↓
+Output
+    </pre>
+
+    <p>
+      Each stage has a specific responsibility and works
+      together to execute Vijay++ programs correctly.
+    </p>
+
+    <h2>1. Source Code</h2>
+
+    <p>
+      Source code is the program written by the developer.
+      It contains Vijay++ keywords, variables, expressions,
+      and logic.
+    </p>
+
+    <pre>
+Ghilli
+
+Headmaster name = "Vijay"
+
+ImWaiting name
+    </pre>
+
+    <p>
+      This is the input provided to the interpreter.
+    </p>
+
+    <h2>2. Lexer (Tokenization)</h2>
+
+    <p>
+      The lexer reads raw source code and breaks it into
+      smaller pieces called tokens.
+    </p>
+
+    <h3>Example Tokens</h3>
+
+    <pre>
+KEYWORD   → Ghilli
+KEYWORD   → Headmaster
+IDENTIFIER → name
+OPERATOR  → =
+STRING    → "Vijay"
+KEYWORD   → ImWaiting
+IDENTIFIER → name
+    </pre>
+
+    <p>
+      Tokenization makes the code easier for later stages
+      to understand and process.
+    </p>
+
+    <h2>3. Parser</h2>
+
+    <p>
+      The parser analyzes the sequence of tokens and checks
+      whether they follow Vijay++ language rules.
+    </p>
+
+    <p>
+      If invalid syntax is detected, the parser reports
+      a syntax error and stops execution.
+    </p>
+
+    <pre>
+Syntax Error:
+Expected variable name after Headmaster
+    </pre>
+
+    <h2>4. AST (Abstract Syntax Tree)</h2>
+
+    <p>
+      After successful parsing, the parser creates an
+      Abstract Syntax Tree (AST).
+    </p>
+
+    <p>
+      The AST is a structured representation of the program
+      that describes its meaning and relationships.
+    </p>
+
+    <h3>Example AST</h3>
+
+    <pre>
+Program
+ ├── VariableDeclaration
+ │    ├── name
+ │    └── "Vijay"
+ │
+ └── PrintStatement
+      └── name
+    </pre>
+
+    <p>
+      The AST becomes the blueprint used during execution.
+    </p>
+
+    <h2>5. Interpreter</h2>
+
+    <p>
+      The interpreter walks through the AST and executes
+      each node according to Vijay++ language rules.
+    </p>
+
+    <p>
+      During execution it can:
+    </p>
+
+    <ul>
+      <li>Create variables</li>
+      <li>Store values</li>
+      <li>Evaluate expressions</li>
+      <li>Run conditions</li>
+      <li>Execute loops</li>
+      <li>Generate output</li>
+    </ul>
+
+    <h2>6. Output</h2>
+
+    <p>
+      After execution, results are displayed to the user.
+    </p>
+
+    <pre>
+Vijay
+    </pre>
+
+    <p>
+      This is the final stage of the execution process.
+    </p>
+
+    <h2>Complete Example</h2>
+
+    <pre>
+Ghilli
+
+Headmaster score = 95
+
+Mudivu score > 50 {
+  ImWaiting "Pass"
+}
+    </pre>
+
+    <h3>Execution Flow</h3>
+
+    <ol>
+      <li>Source code is read.</li>
+      <li>Lexer creates tokens.</li>
+      <li>Parser validates syntax.</li>
+      <li>AST is generated.</li>
+      <li>Interpreter executes nodes.</li>
+      <li>Output is displayed.</li>
+    </ol>
+
+    <h2>Why This Matters</h2>
+
+    <p>
+      Understanding the execution process helps developers
+      learn how programming languages work internally.
+      It also makes debugging, language development,
+      and interpreter design easier to understand.
+    </p>
+
+    <p>
+      Vijay++ follows a modern interpreter architecture
+      that separates tokenization, parsing, and execution
+      into distinct stages for clarity and maintainability.
+    </p>
+  `
+},
+
+{
+  title: "Complete Example",
+  code: `Ghilli
+
+Solu "Enter Name: " name
+Solu "Enter Marks: " marks
+
+Mudivu marks >= 50 {
+  ImWaiting "Congratulations " + name
+  ImWaiting "Result: Pass"
+}
+Illati {
+  ImWaiting "Sorry " + name
+  ImWaiting "Result: Fail"
+}`,
+  content: `
+    <h1>Complete Example</h1>
+
+    <p>
+      This example combines several core Vijay++ features
+      into a single program.
+    </p>
+
+    <p>
+      It demonstrates how to collect user input,
+      store data in variables, evaluate conditions,
+      and display output.
+    </p>
+
+    <h2>Concepts Used</h2>
+
+    <ul>
+      <li>Solu (User Input)</li>
+      <li>Variables</li>
+      <li>Mudivu (Conditional Statements)</li>
+      <li>Illati (Else Statements)</li>
+      <li>ImWaiting (Output)</li>
+      <li>String Concatenation</li>
+    </ul>
+
+    <h2>Program Walkthrough</h2>
+
+    <p>
+      The program asks the user to enter their name
+      and examination marks.
+    </p>
+
+    <p>
+      The marks are evaluated using a Mudivu condition.
+      If the marks are greater than or equal to 50,
+      the student passes. Otherwise, the student fails.
+    </p>
+
+    <h2>Example Execution (Pass)</h2>
+
+    <pre>
+Enter Name:
+> Vijay
+
+Enter Marks:
+> 85
+
+Congratulations Vijay
+Result: Pass
+    </pre>
+
+    <h2>Example Execution (Fail)</h2>
+
+    <pre>
+Enter Name:
+> Vijay
+
+Enter Marks:
+> 35
+
+Sorry Vijay
+Result: Fail
+    </pre>
+
+    <h2>Execution Flow</h2>
+
+    <ol>
+      <li>Program starts at Ghilli.</li>
+      <li>User enters their name.</li>
+      <li>User enters their marks.</li>
+      <li>The condition marks >= 50 is evaluated.</li>
+      <li>Mudivu block runs if true.</li>
+      <li>Illati block runs if false.</li>
+      <li>The final result is displayed.</li>
+    </ol>
+
+    <h2>Program Structure Analysis</h2>
+
+    <pre>
+Ghilli
+  ↓
+Input Name
+  ↓
+Input Marks
+  ↓
+Evaluate Condition
+  ↓
+Pass ? -------- No
+  |              |
+ Yes             |
+  |              |
+  ↓              ↓
+Pass Output   Fail Output
+  ↓              ↓
+ Program Ends
+    </pre>
+
+    <h2>What You Learned</h2>
+
+    <p>
+      By completing this example, you have used the most
+      important concepts in Vijay++ programming:
+      variables, input, output, conditions, and program flow.
+    </p>
+
+    <p>
+      Most real-world Vijay++ applications are built by
+      combining these same concepts in different ways.
+    </p>
+
+    <h2>Next Steps</h2>
+
+    <p>
+      After understanding this example, you should be able to
+      create your own interactive programs using user input,
+      decision-making, loops, and variables.
+    </p>
+  `
+},
+
+{
+  title: "Language Roadmap",
+  code: `Sei add(a, b) {
+  Thiruppu a + b
+}
+
+Headmaster result = add(10, 20)
+
+ImWaiting result`,
+  content: `
+    <h1>Language Roadmap</h1>
+
+    <p>
+      Vijay++ is continuously evolving with the goal of
+      becoming a powerful, beginner-friendly programming
+      language while maintaining its simplicity and readability.
+    </p>
+
+    <p>
+      The roadmap outlines planned features and future
+      improvements that will expand the capabilities of
+      the language and its ecosystem.
+    </p>
+
+    <h2>Current Status</h2>
+
+    <p>
+      Vijay++ currently supports:
+    </p>
+
+    <ul>
+      <li>Program Execution (Ghilli)</li>
+      <li>Variables (Headmaster)</li>
+      <li>Input and Output</li>
+      <li>Conditional Statements</li>
+      <li>Loops</li>
+      <li>Expressions and Operators</li>
+      <li>Automatic Type Detection</li>
+      <li>Basic Error Reporting</li>
+    </ul>
+
+    <h2>Phase 1 — Functions</h2>
+
+    <p>
+      Functions will allow developers to organize code
+      into reusable blocks.
+    </p>
+
+    <pre>
+Sei add(a, b) {
+  Thiruppu a + b
+}
+    </pre>
+
+    <p>
+      This feature will introduce reusable logic,
+      parameters, and return values.
+    </p>
+
+    <h2>Phase 2 — Arrays</h2>
+
+    <p>
+      Arrays will allow storage of multiple values
+      inside a single variable.
+    </p>
+
+    <pre>
+Headmaster marks = [90, 85, 95]
+    </pre>
+
+    <p>
+      Arrays will simplify data collection and processing.
+    </p>
+
+    <h2>Phase 3 — Objects</h2>
+
+    <p>
+      Objects will enable structured data storage.
+    </p>
+
+    <pre>
+Headmaster student = {
+  name: "Vijay",
+  marks: 95
+}
+    </pre>
+
+    <p>
+      This feature will make complex applications
+      easier to build and maintain.
+    </p>
+
+    <h2>Phase 4 — Modules</h2>
+
+    <p>
+      Modules will allow developers to split programs
+      into multiple files and organize code efficiently.
+    </p>
+
+    <pre>
+Import math
+
+ImWaiting math.add(5, 10)
+    </pre>
+
+    <h2>Phase 5 — Standard Library</h2>
+
+    <p>
+      A built-in standard library will provide
+      commonly used utilities and helper functions.
+    </p>
+
+    <ul>
+      <li>String Utilities</li>
+      <li>Math Functions</li>
+      <li>Date and Time</li>
+      <li>File Handling</li>
+      <li>Collections</li>
+    </ul>
+
+    <h2>Phase 6 — Package Manager</h2>
+
+    <p>
+      A package manager will allow developers to
+      install and share community-created libraries.
+    </p>
+
+    <pre>
+vijay install analytics
+    </pre>
+
+    <h2>Phase 7 — Developer Tools</h2>
+
+    <ul>
+      <li>VS Code Extension</li>
+      <li>Syntax Highlighting</li>
+      <li>Auto Completion</li>
+      <li>Debugger Support</li>
+      <li>Code Formatter</li>
+    </ul>
+
+    <h2>Long-Term Vision</h2>
+
+    <p>
+      The long-term goal of Vijay++ is to provide an
+      educational programming language that helps new
+      developers understand programming concepts while
+      also introducing them to language design and
+      interpreter architecture.
+    </p>
+
+    <p>
+      Vijay++ aims to combine simplicity, readability,
+      and modern development practices into a language
+      that is enjoyable to learn and build with.
+    </p>
+
+    <h2>Thank You</h2>
+
+    <p>
+      Thank you for exploring Vijay++.
+      This documentation will continue to grow as
+      new features and capabilities are added.
+    </p>
+
+    <p>
+      Happy Coding with Vijay++ 🚀
+    </p>
+  `
+}
 
 ];
 
